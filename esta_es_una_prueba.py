@@ -17,7 +17,3 @@ f.write(r.read())
 f.close()
 print(file1)
 print('Datos de las ultimas 24 horas del OH obtenidos')
-
-
-
-
