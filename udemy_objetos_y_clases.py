@@ -7,22 +7,29 @@ class Usuario:
     def saludo(self):
         print('Hola!, mi nombre es', self.nombre, self.apellido)
 
+    def sadulo2(self):
+        print("hola, mi nombre es:", self.nombre, "y mi apellido es:", self.apellido)
+        
 usuario = Usuario("Julio Cesar", "LM")
 
 usuario.saludo()
+usuario.sadulo2()
 
-# class Admin(Usuario):
-#     def superSaludo(self):
-#         print('Hola!, me llamo,', self.nombre, ' y soy administrador')
 
-# # usuario = Usuario('Felipe', 'Feliz')
 
-# # usuario.saludo()
-# # usuario.nombre = 'Chanchito'
-# # usuario.saludo()
-# # # del usuario.nombre
-# # # del usuario
-# # # print(usuario)
+
+class Admin(Usuario):
+    def superSaludo(self):
+        print('Hola!, me llamo,', self.nombre, ' y soy administrador')
+
+usuario = Usuario('Felipe', 'Feliz')
+
+usuario.saludo()
+usuario.nombre = 'Chanchito' #podemos renormbrar las propiedades de las instancias de esta manera
+usuario.saludo()
+#del usuario.nombre # de esta forma quitamos propiedades a una instancia
+#del usuario # esto elimina un objeto por completo
+#print(usuario)
 
 # # admin = Admin('Super', 'Feliz')
 # # admin.saludo()
