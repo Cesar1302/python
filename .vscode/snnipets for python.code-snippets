@@ -1,0 +1,11 @@
+{
+	"Print to console": {
+		"scope": "python",
+		"prefix": "pnt",
+		"body": [
+			"print($1)",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
