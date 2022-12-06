@@ -31,6 +31,7 @@ usuario.saludo()
 #del usuario # esto elimina un objeto por completo
 #print(usuario)
 
+#Ya vamos a pasar a las herencias
 
 # # admin = Admin('Super', 'Feliz')
 # # admin.saludo()
