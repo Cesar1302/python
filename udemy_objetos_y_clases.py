@@ -31,41 +31,44 @@ usuario.saludo()
 #del usuario # esto elimina un objeto por completo
 #print(usuario)
 
-#Ya vamos a pasar a las herencias
+#Ya vamos a pasar a las herencias, es un concepto en Programacion orientada a objetos para reutilizar lo maximo posible un codigo donde la estructura sea muy similar
+class Admin(Usuario):
+    def supersaludo(self):
+        print("hola mi nombre es:", self.nombre, "y soy desarrollador, me apellido", self.apellido)
 
-# # admin = Admin('Super', 'Feliz')
-# # admin.saludo()
-# # admin.superSaludo()
+admin = Admin("Cesar", "Libreros")
+admin.supersaludo()
 
-# # usuario.superSaludo()
 
-# class Animal:
-#     def __init__(self, nombre, onomatopeya):
-#         self.nombre = nombre
-#         self.onomatopeya = onomatopeya
-#     def saludo(self):
-#         print('Hola, soy un', self.tipo, 'y mi sonido es el', self.onomatopeya)
+# usuario.superSaludo()
 
-# class Gato(Animal):
-#     tipo = 'gato'
-#     def __init__(self, nombre, onomatopeya):
-#         Animal.__init__(self, nombre, onomatopeya)
-#         print('Hola, soy un gato extendido!')
+class Animal:
+    def __init__(self, nombre, onomatopeya):
+        self.nombre = nombre
+        self.onomatopeya = onomatopeya
+    def saludo(self):
+        print('Hola, soy un', self.tipo, 'y mi sonido es el', self.onomatopeya)
 
-# class Perro(Animal):
-#     tipo = 'perro'
-#     def __init__(self, nombre, onomatopeya):
-#         super().__init__(nombre, onomatopeya)
-#         print('instanciando un perro')
+class Gato(Animal):
+    tipo = 'gato'
+    def __init__(self, nombre, onomatopeya):
+        Animal.__init__(self, nombre, onomatopeya)
+        print('Hola, soy un gato extendido!')
 
-# class Canario(Animal):
-#     tipo = 'canario'
+class Perro(Animal):
+    tipo = 'perro'
+    def __init__(self, nombre, onomatopeya):
+        super().__init__(nombre, onomatopeya)
+        print('instanciando un perro')
 
-# gato = Gato('Fluffy', 'maullido')
-# gato.saludo()
+class Canario(Animal):
+    tipo = 'canario'
 
-# perro = Perro('Firulais', 'ladrido')
-# perro.saludo()
+gato = Gato('Fluffy', 'maullido')
+gato.saludo()
 
-# canario = Canario('Piolin', 'silvido')
-# canario.saludo()
+perro = Perro('Firulais', 'ladrido')
+perro.saludo()
+
+canario = Canario('Piolin', 'silvido')
+canario.saludo()
